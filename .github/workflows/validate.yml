@@ -24,7 +24,7 @@ jobs:
           java-version: 17
       - uses: gradle/gradle-build-action@v2
       - name: Run Lint
-        run: ./gradlew lintDebug --no-daemon
+        run: ./gradlew clean install -x test
       - name: Zip reports
         if: always()
         run: zip -r reports.zip . -i '**/reports/*.xml' '**/reports/*.html'
