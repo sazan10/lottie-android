@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        java: [ '17' ]
+        java: [ '11' ]
     name: Java ${{ matrix.java }} Run Java
 
     steps:
@@ -24,4 +24,4 @@ jobs:
     - uses: gradle/gradle-build-action@v3
     - name: Compile Java sources
       run: |
-        ./gradlew assembleDebug --info -x test
+        ./gradlew clean assembleDebug --info -x test
