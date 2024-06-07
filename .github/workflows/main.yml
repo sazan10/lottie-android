@@ -23,4 +23,4 @@ jobs:
     - uses: gradle/gradle-build-action@v2
     - name: Compile Java sources
       run: |
-        ./gradlew clean build --info -x test
+        ./gradlew assembleDebug --info -x test
